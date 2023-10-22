@@ -1,6 +1,6 @@
 # Quantum Internet Application Challenge 
 
-## Overview
+## Overview:
 
 Welcome to my submission for the Quantum Internet Application Challenge, hosted by the Quantum Internet Alliance. This repository presents my idea for an innovative application in the field of quantum internet.
 
