@@ -4,7 +4,7 @@
 
 Welcome to my submission for the Quantum Internet Application Challenge, hosted by the Quantum Internet Alliance. This repository presents my idea for an innovative application in the field of quantum internet.
 
-![Impact of QND]((https://github.com/HoceiniRihab/Quantum-Internet-Application-Challenge/blob/main/QIA.png?raw=true))
+![Impact of QND](https://github.com/HoceiniRihab/Quantum-Internet-Application-Challenge/blob/main/QIA.png?raw=true)
 
 ## Project Idea: Enhancing Quantum Key Distribution for Quantum Internet Applications
 
