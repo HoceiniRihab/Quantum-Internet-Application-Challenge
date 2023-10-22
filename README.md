@@ -17,18 +17,16 @@ My project proposal aims to enhance Quantum Key Distribution (QKD) for secure qu
 
 ### Repository Contents
 
-- [**Qiskit Code**](link-to-your-Qiskit-code)
+- [**Qiskit Code**]([link-to-your-Qiskit-code](https://github.com/HoceiniRihab/Quantum-Internet-Application-Challenge/blob/main/CalcSKR.ipynb))
 
-- [**Project Documentation**](link-to-your-documentation): Access the detailed project documentation that explains the concept, and potential impact of my application.
+- [**Project Documentation**]((https://docs.google.com/document/d/16cqdiE4Rjx_u5cl3_r_FfUKrriCteB6UJmGcabaBDyc/edit?usp=sharing)): Access the detailed project documentation that explains the concept, and potential impact of my application.
 
 ## About me
 
 - **Author:** [Hoceini Rihab]
 - **Email:** [hoceinirihab20@gmail.com]
 
-## License
 
-This project is open-source and is released under the [MIT License](link-to-your-license-file). Feel free to explore, contribute, and collaborate.
 
-Thank you for taking an interest in my quantum internet application idea. I look forward to your feedback and potential collaborations.
+Thank you for taking an interest in my quantum internet application idea. Stay tuned for more details about this innovative project, including in-depth explanations, methodologies, and results.
 
