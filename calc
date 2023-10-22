@@ -1,0 +1,43 @@
+from qiskit import QuantumCircuit, Aer, execute
+from qiskit.visualization import plot_histogram
+from math import log2
+
+#  the parameters
+sZ1 = 1000  # Number of single-photon contributions in Z basis
+sZ0 = 1000  # Number of vacuum-state contributions in Z basis
+phi_uZ = 0.01  # Upper bound on single-photon phase-error rate
+f = 1.053  # Efficiency of error correction code
+nZ = 10**(8)  # Sifted key length in Z basis
+EZ = 0.05  # Bit error rate in Z basis
+epsilon_sec = 10**(-10)  # Secrecy parameter
+epsilon_cor = 10**(-15)  # Correctness parameter
+t = 0.01  # Data accumulation time
+
+# Create the quantum circuit
+qc = QuantumCircuit(2)
+
+# Alice prepares her qubits in the Z basis
+qc.h(0)
+qc.measure_all()
+
+# Bob measures the qubits in a randomly chosen basis
+qc.barrier()
+qc.h(0)
+qc.measure_all()
+
+# Simulate the circuit qc
+simulator = Aer.get_backend('qasm_simulator')
+job = execute(qc, simulator, shots=1)
+result = job.result()
+counts = result.get_counts(qc)
+
+# Calculate the number of single-photon and vacuum-state contributions
+sZ1_actual = counts.get('00', 0)
+sZ0_actual = counts.get('11', 0)
+
+# Calculate the finite-key secure key rate (SKR)
+h_phi_uZ = -phi_uZ * log2(phi_uZ) - (1 - phi_uZ) * log2(1 - phi_uZ)
+h_EZ = -EZ * log2(EZ) - (1 - EZ) * log2(1 - EZ)
+SKR = ((sZ1 / nZ) + (sZ0 / nZ) * (1 - h_phi_uZ) - f * nZ * h_EZ - 6 * log2(19 / epsilon_sec) - log2(2 / epsilon_cor)) / t
+
+print(f"The finite-key secure key rate is: {abs(SKR)} bits per second")
