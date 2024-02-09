@@ -23,8 +23,9 @@ My project proposal aims to enhance Quantum Key Distribution (QKD) for secure qu
 
 ## About me
 
-- **Author:** [Hoceini Rihab]
+- **Author:** [Hoceini Rihab](https://github.com/HoceiniRihab)
 - **Email:** [hoceinirihab20@gmail.com]
+- 
 
 
 
